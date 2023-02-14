@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 const root = {
+  backgroundColor: '#ffffff',
   boxShadowColor: '#d6d6d6',
   border: '#5b5b5b',
   secondTextColor: '#5b5b5b',
@@ -13,6 +14,7 @@ export const CardWrapper = styled.div`
   border-radius: 5px;
   border: 1px solid ${root.border};
   box-shadow: 3px 3px 3px 3px ${root.boxShadowColor};
+  background-color: ${root.backgroundColor};
 `;
 
 export const Description = styled.div`

@@ -7,4 +7,5 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 40px;
+  background-color: #d8e7f5;
 `;
