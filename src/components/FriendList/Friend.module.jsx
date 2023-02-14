@@ -15,7 +15,7 @@ export const FriendList = styled.ul`
   align-items: center;
   justify-self: center;
   gap: 10px;
-  width: 270px;
+  width: 210px;
 `;
 
 export const FriendListItem = styled.li`
@@ -24,7 +24,9 @@ export const FriendListItem = styled.li`
   justify-self: center;
   background-color: #fff;
   width: 100%;
-  padding: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px ${root.boxShadowColor};
 `;
 
 // const setBgColor = props => {
@@ -43,6 +45,7 @@ export const StatusOn = styled.span`
   height: 20px;
   border-radius: 50%;
   background-color: green;
+  margin-right: 15px;
 `;
 
 export const StatusOff = styled.span`
@@ -50,23 +53,18 @@ export const StatusOff = styled.span`
   height: 20px;
   border-radius: 50%;
   background-color: red;
+  margin-right: 15px;
 `;
 
 export const Avatar = styled.img`
   width: 48px;
   height: 48px;
   border-radius: 5px;
+  margin-right: 15px;
 `;
 
 export const UserName = styled.p`
-  margin: 0;
-  margin-top: 10px;
   font-weight: 700;
   font-size: ${root.fontSizeName};
   line-height: 1.67;
-  &.subtitle {
-    font-weight: normal;
-    font-size: ${root.fontSizeText};
-    color: ${root.secondTextColor};
-  }
 `;

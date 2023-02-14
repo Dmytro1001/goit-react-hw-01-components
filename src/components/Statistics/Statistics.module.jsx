@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 const root = {
   backgroundColor: '#ffffff',
+  boxShadowColor: '#d6d6d6',
   border: '#5b5b5b',
   secondTextColor: '#ffffff',
   fontSizeName: '20px',
@@ -14,6 +15,7 @@ export const Wrapper = styled.section`
   align-items: center;
   width: 270px;
   border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px ${root.boxShadowColor};
   background-color: ${root.backgroundColor};
 `;
 
