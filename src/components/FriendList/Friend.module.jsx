@@ -29,31 +29,14 @@ export const FriendListItem = styled.li`
   box-shadow: 3px 3px 3px 3px ${root.boxShadowColor};
 `;
 
-// const setBgColor = props => {
-//   switch (props.isOnline) {
-//     case false:
-//       return 'red';
-//     case true:
-//       return 'green';
-//     default:
-//       return 'grey';
-//   }
-// };
-
-export const StatusOn = styled.span`
+export const Status = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: green;
   margin-right: 15px;
-`;
-
-export const StatusOff = styled.span`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: red;
-  margin-right: 15px;
+  background-color: ${props => {
+    return props.isActive ? 'green' : 'red';
+  }};
 `;
 
 export const Avatar = styled.img`

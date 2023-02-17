@@ -1,26 +1,20 @@
 import PropTypes from 'prop-types';
-import {
-  Wrapper,
-  Title,
-  StatList,
-  StatItem,
-  LabelText,
-  Percentage,
-} from './Statistics.module';
+import { StatisticItem } from './StatisticItem';
+import { Wrapper, Title, StatList } from './Statistics.module';
 
 export const Statistics = ({ title, data }) => {
-  const renderData = () =>
-    data.map(({ id, label, percentage }) => (
-      <StatItem key={id}>
-        <LabelText>{label}</LabelText>
-        <Percentage>{percentage}%</Percentage>
-      </StatItem>
-    ));
-
   return (
     <Wrapper>
       {title && <Title>{title}</Title>}
-      <StatList>{data && renderData()}</StatList>
+      <StatList>
+        {data.map(item => (
+          <StatisticItem
+            key={item.id}
+            label={item.label}
+            percentage={item.percentage}
+          />
+        ))}
+      </StatList>
     </Wrapper>
   );
 };
@@ -30,8 +24,6 @@ Statistics.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
     })
   ).isRequired,
 };

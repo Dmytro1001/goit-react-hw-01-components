@@ -23,8 +23,9 @@ export const Header = styled.th`
 `;
 
 export const Row = styled.tr`
-&:nth-of-type(2n) {
+  &:nth-of-type(2n) {
     background-color: orange;
+  }
 `;
 
 export const TableDate = styled.td`
